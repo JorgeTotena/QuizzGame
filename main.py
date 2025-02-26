@@ -3,7 +3,6 @@ from data import question_data
 from quiz_brain import QuizBrain
 
 question_bank = []
-
 for i in question_data:
     text = i["question"]
     answer = i["correct_answer"]

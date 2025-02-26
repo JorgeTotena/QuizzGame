@@ -1,4 +1,15 @@
 # You can get more trivia questions from an api here in this webpage https://opentdb.com/api_config.php
+import requests
+QUESTIONS = 10
+TYPE = "boolean"
+parameters = {
+    "amount": QUESTIONS,
+    "type": TYPE
+}
+response = requests.get("https://opentdb.com/api.php", params=parameters)
+response.raise_for_status()
+data = response.json()
+print(data)
 question_data = [
     {
         "type": "boolean",
